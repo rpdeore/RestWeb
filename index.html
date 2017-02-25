@@ -1,0 +1,142 @@
+<html>
+ <head>
+   <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+   
+   <script>
+     
+    
+     var initializeSlideshow = function() 
+     {
+        $('#slide0, #slide2').cycle({
+          timeout: 8000,
+        });
+
+          $('#slide1, #slide3').cycle({
+            delay: 2000,
+            timeout: 8000,
+          });
+    };
+
+    
+   </script>
+   <script>
+     $(document).ready(initializeSlideshow);
+   </script>
+   </link>
+ </head>
+ <body>
+   <div id="main">
+     <header>
+       <h1 id="logo">
+         <a href="/"> <img src="img/logo.png" alt="logo"> </a>
+       </h1>
+     </header>
+     <div class="slideShowContainer"> 
+       <div class="first_slide">
+	         <div id="slide0" class="slide">
+	           <img class ="images" src="img/2.jpg">
+	           <img class ="images" src="img/3.jpg">
+	           <img class ="images" src="img/14.jpg">
+	           
+	         </div>
+		       <div id="slide1" class="slide">
+	           <img class ="images" src="img/6.jpg">
+	           <img class ="images" src="img/7.jpg">
+	           <img class ="images" src="img/13.jpg">
+	          
+	         </div>
+	         <div id="slide2" class="slide">
+	           <img class ="images" src="img/8.jpg">
+	           <img class ="images" src="img/9.jpg">
+	           <img class ="images" src="img/12.jpg">
+	          
+	         </div>
+	         <div id="slide3" class="slide">
+	           <img class ="images" src="img/5.jpg">
+	           <img class ="images" src="img/10.jpg">
+	           <img class ="images" src="img/11.jpg">
+	           
+	         </div>
+       </div>
+     </div>
+     
+     <div class="bottomContainer">
+        <nav>
+            <ul>
+              <li ><a href="#" onclick="openDiv(event,'MENUS')" > MENUS </a></li>
+              <li> <a href="#" onclick="openDiv(event,'RESERVATIONS')" > RESERVATIONS </a></li>
+              <li> <a href="#" onclick="openDiv(event,'PEOPLE')" > PEOPLE </a> </li>
+              <li> <a href="#" onclick="openDiv(event,'PRIVATE DINING')" > PRIVATE DINING </a> </li>
+              <li> <a href="#" onclick="openDiv(event,'COOKBOOKS')" > COOKBOOKS </a> </li>
+              <li> <a href="#" onclick="openDiv(event,'CONTACT')" > CONTACT </a> </li>
+        </nav>
+
+          <div id="MENUS" class="content">
+             <p> We serve a seasonal tasting menu that focuses on local ingredients. A meal with us consists of 8-10 courses which includes communal dishes as well as some individual choices. We offer the same menu for both Lunch and Dinner and a meal lasts roughly three hours.</p>
+
+<p>The price of our tasting menu is $295 per guest. This price is all inclusive, excluding beverages and tax. As such, gratuities are neither expected nor accepted. </p>
+              <div>
+                <ul class="dishList">
+                  <li> <a href="#"> Vegiterian Dishes </a> </li>
+                  <li> <a href="#"> Non-vegiterian Dishes </a> </li>
+                </ul> 
+              </div>
+
+          </div>
+          <div id="RESERVATIONS" class="content">
+             <p> 2 </p>
+          </div>
+          <div id="PEOPLE" class="content">
+             <div>
+                <ul class="chef">
+                  <li> <a href="#"> Roshani Deore, Chef </a> </li>
+                  <li> <a href="#"> Ruchir Shende, Chef </a> </li>
+                </ul> 
+              </div>
+          </div>
+          <div id="ACCOLADES" class="content">
+             <p> 4 </p>
+          </div>
+          <div id="PRIVATE DINING" class="content">
+             <p> Our two balcony-level private dining rooms overlook the Main Dining Room and offer views of Madison Square Park through floor to ceiling windows. The South Private Dining Room accommodates up to 18 seated guests, and the North Private Dining Room accommodates up to 34 seated guests. These rooms can be combined to accommodate up to 50 seated guests. For larger parties, the Main Dining Room is available for exclusive use of the restaurant and can accommodate up to 110 guests for seated events. </p>
+          </div>
+             <div id="COOKBOOKS" class="content">
+             <p> 6 </p>
+          </div>
+          <div id="COLABORATIONS" class="content">
+             <p> 7 </p>
+          </div>
+          <div id="CONTACT" class="content">
+             <p> Rosh Restaurant is open Monday through Sunday.
+Lunch: Friday–Sunday, noon–1:00pm
+Dinner: Monday–Wednesday, 5:30 pm–10:00 pm and Thursday–Sunday, 5:30 pm–10:30 pm </p>
+              <p> follow us on </p>
+              <a target="_blank" href="https://www.facebook.com"> <img class ="follow" src ="img/facebook.jpg" alt="facebook"> </a>
+              <a target="_blank" href="https://www.linkedin.com/in/roshanideore/"><img class ="follow" src="img/linkedin.jpg" alt="Linkedin"></a>
+          </div>
+        </div>
+
+        <script>
+        function openDiv(ev,selection)
+        {
+          var tabcontent;
+          tabcontent = document.getElementsByClassName("content");
+          for(var i=0;i<tabcontent.length;i++)
+          {
+            tabcontent[i].style.display = "None";
+          }
+          document.getElementById(selection).style.display = "block";
+          //vat linlks = document.getElementByTagName("a")
+
+        }
+        </script>
+
+     </div>
+
+     
+   </div>
+
+ </body>
+</html>
